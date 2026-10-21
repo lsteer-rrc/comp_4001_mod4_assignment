@@ -17,7 +17,6 @@ config.vm.hostname = "Lukas-Steer"
     # Update system and install prerequisites
     sudo dnf update -y
     sudo dnf install -y yum-utils git curl
-    
     # Install Docker (official method for CentOS Stream 9)
     sudo dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
     sudo dnf install -y docker-ce docker-ce-cli containerd.io
@@ -37,8 +36,8 @@ config.vm.hostname = "Lukas-Steer"
     sudo ln -s /usr/local/lib/docker/cli-plugins/docker-compose /usr/local/bin/docker-compose
 
     # Clone repositories
-    git clone https://github.com/Feranmi-A/Studentportfoliotemplate.git /home/vagrant/Studentportfoliotemplate
-    git clone https://github.com/Feranmi-A/BankingApp.git /home/vagrant/BankingApp
+    git clone https://github.com/lsteer-rrc/StudentProfile.git /home/vagrant/Studentportfoliotemplate
+    git clone https://github.com/lsteer-rrc/DevOpsModule-4-Activity2.git /home/vagrant/BankingApp
 
     # Create docker-compose.yml
     cat <<EOL > /home/vagrant/docker-compose.yml
